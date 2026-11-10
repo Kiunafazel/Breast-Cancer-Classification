@@ -1,33 +1,47 @@
 # Breast Cancer Prediction 🎗️
 
-تشخیص تومور خوش‌خیم (Benign) و بدخیم (Malignant) با استفاده از رگرسیون لجستیک.
+A Machine Learning project that classifies breast tumors as **Benign** or **Malignant** using Logistic Regression.
 
-## 📊 دیتاست
+## 📊 Dataset
 
-[Breast Cancer Wisconsin (Diagnostic)](https://www.kaggle.com/datasets/uciml/breast-cancer-wisconsin-data) — شامل ۵۶۹ نمونه با ۳۰ ویژگی عددی (اندازه‌گیری‌های سلول تومور مانند شعاع، بافت، محیط،_AREA و ...).
+[Breast Cancer Wisconsin (Diagnostic)](https://www.kaggle.com/datasets/uciml/breast-cancer-wisconsin-data)
 
-- برچسب: `M` (بدخیم) و `B` (خوش‌خیم) → به `1` و `0` تبدیل شده.
+The dataset contains 569 samples and 30 numerical features describing cell nuclei characteristics, such as radius, texture, perimeter, and area.
 
-## 🧪 مراحل انجام‌شده
+- `M`: Malignant (1)
+- `B`: Benign (0)
 
-1. حذف ستون `id`
-2. تبدیل برچسب‌های `M`/`B` به `1`/`0`
-3. نرمال‌سازی ویژگی‌ها با min-max scaling
-4. تقسیم داده به آموزش/آزمون (۸۵٪ / ۱۵٪) با حفظ تناسب کلاس‌ها (`stratify`)
-5. آموزش مدل Logistic Regression
-6. ارزیابی با دقت، ماتریس درهم‌ریختگی و گزارش طبقه‌بندی
+## 🧪 Project Workflow
 
-## 📈 نتیجه
+1. Removed the `id` column.
+2. Converted diagnosis labels (`M` and `B`) into numerical values (`1` and `0`).
+3. Normalized features using Min-Max Scaling.
+4. Split the dataset into training and testing sets (85% / 15%) using stratified sampling.
+5. Trained a Logistic Regression model.
+6. Evaluated the model using accuracy, confusion matrix, and classification report.
 
-دقت مدل روی داده‌های تست حدود **~۹۸٪** است (عدد دقیق در خروجی نوت‌بوک).
+## 📈 Results
 
-## 🚀 اجرا
+The model achieved approximately **89.5% accuracy** on the test set in the previously reported results.
+
+## 🚀 Installation & Usage
+
+Install the required libraries:
 
 ```bash
 pip install -r requirements.txt
+```
+
+Run the Jupyter Notebook:
+
+```bash
 jupyter notebook Breast-Cancer-Prediction.ipynb
 ```
 
-## 🛠 تکنولوژی‌ها
+## 🛠️ Technologies
 
-Python • Pandas • NumPy • Matplotlib • scikit-learn
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Scikit-learn
